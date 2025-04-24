@@ -7,13 +7,13 @@ pipeline {
     }
 
     environment {
-        GIT_REPO = 'https://github.com/AKSHADA-TECH-PIXEL/jenkinproject.git
+        GIT_REPO = 'https://github.com/AKSHADA-TECH-PIXEL/jenkinproject.git'
     }
 
     stages {
         stage('Clone Repo') {
             steps {
-                git url: "https://github.com/AKSHADA-TECH-PIXEL/jenkinproject.git, branch: 'main'
+                git url: "${env.GIT_REPO}", branch: 'main'
             }
         }
 
@@ -33,3 +33,4 @@ pipeline {
         }
     }
 }
+
